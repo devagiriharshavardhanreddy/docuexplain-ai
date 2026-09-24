@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #060811;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+    background-position: center, center, -1px -1px, -1px -1px;
+    color: #F1F5F9;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.015em;
+    min-height: 100vh;
+  }
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(6, 10, 20, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.6);
+}
+
+/* Cyber Glassmorphism Systems */
+.cyber-panel {
+  background: rgba(10, 16, 28, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.cyber-card {
+  position: relative;
+  background: rgba(12, 19, 34, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.25s ease-in-out;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
+  pointer-events: none;
+}
+
+.cyber-card:hover {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 12px 35px -5px rgba(6, 182, 212, 0.12), inset 0 0 15px rgba(6, 182, 212, 0.03);
+}
+
+.cyber-glow-cyan {
+  box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.25);
+}
+
+.cyber-glow-emerald {
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+}
+
+.cyber-glow-purple {
+  box-shadow: 0 0 30px -5px rgba(168, 85, 247, 0.25);
+}
+
+/* Futuristic Text Gradients */
+.gradient-cyber-text {
+  background: linear-gradient(135deg, #E0F2FE 0%, #38BDF8 40%, #818CF8 80%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 15px rgba(56, 189, 248, 0.25));
+}
+
+.gradient-emerald-text {
+  background: linear-gradient(135deg, #A7F3D0 0%, #34D399 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-amber-text {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* XAI Highlighted Tokens */
+.xai-highlight {
+  background: rgba(6, 182, 212, 0.2);
+  color: #38BDF8;
+  border-bottom: 2px solid #06B6D4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+.xai-highlight-emerald {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+  border-bottom: 2px solid #10B981;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+/* Scanline Animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(180deg, transparent, rgba(6, 182, 212, 0.3), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+}
+
+/* Radar Sweep Keyframe */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
+
+/* Neon Pulse Dot */
+@keyframes neon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}

@@ -1,0 +1,47 @@
+﻿version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: docuexplain-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: docuexplain
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: docuexplain-backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgrespassword2026@postgres:5432/docuexplain
+      - JWT_SECRET=docuexplain_secret_jwt_key_xai_defense_2026_secure
+      - LLM_PROVIDER=local
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: docuexplain-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  postgres_data:

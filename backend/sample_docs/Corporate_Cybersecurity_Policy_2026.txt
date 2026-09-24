@@ -1,0 +1,24 @@
+================================================================================
+CORPORATE INFORMATION SECURITY POLICY (REVISION 2026.4)
+Enterprise Policy Governance Board
+================================================================================
+
+1. DATA CLASSIFICATION TIERS
+All organizational data assets are categorized into four distinct classification levels:
+- Tier 1 (Restricted): Highly sensitive intellectual property, cryptographic keys, customer PII, and financial records. Requires hardware MFA and AES-256 encryption at rest and in transit.
+- Tier 2 (Confidential): Internal strategic plans, internal audit reports, and proprietary documentation. Accessible only on a need-to-know basis.
+- Tier 3 (Internal): General operational memos, team documentation, and internal project wikis. Accessible to all authorized employees.
+- Tier 4 (Public): Marketing materials, public press releases, and approved whitepapers.
+
+2. AUTHENTICATION & ACCESS CONTROLS
+- All employee accounts must enforce FIDO2 WebAuthn or multi-factor authentication (MFA).
+- Passwords must be at least 14 characters in length, containing uppercase letters, numbers, and symbols.
+- Inactive sessions must automatically lock and terminate after 15 minutes of inactivity.
+
+3. INCIDENT RESPONSE SERVICE LEVEL AGREEMENTS (SLA)
+- Critical Severity (Tier 1 Data Breach / Active Intrusion): Initial response within 15 minutes; executive containment plan within 1 hour; regulatory reporting within 72 hours.
+- High Severity (Service Disruption): Initial response within 1 hour; resolution target within 4 hours.
+- Medium/Low Severity: Resolution target within 24 to 48 hours.
+
+4. AI & THIRD-PARTY LLM USAGE POLICY
+Employees are strictly prohibited from pasting Tier 1 or Tier 2 confidential documents into public consumer AI services. All document intelligence processing must utilize approved enterprise platforms (such as DocuExplain AI) featuring local vector storage, role-based authorization, and explainable audit logging.

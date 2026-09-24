@@ -1,0 +1,20 @@
+================================================================================
+EXECUTIVE BRIEFING: QUANTUM COMPUTING ROADMAP & POST-QUANTUM CRYPTOGRAPHY
+Strategic Technology Assessment - Global Enterprise Advisory
+================================================================================
+
+1. CURRENT STATE OF QUANTUM COMPUTING
+Quantum computing leverages the principles of superposition and entanglement to process information exponentially faster than classical computers for specific problem classes. As of 2026, the industry has transitioned from early Noisy Intermediate-Scale Quantum (NISQ) systems toward fault-tolerant quantum computing (FTQC) utilizing logical qubits with topological error correction.
+
+2. COMMERCIAL APPLICATION DOMAINS
+- Molecular Simulation & Drug Discovery: Simulating complex molecular interactions and protein folding with atomic-level precision, reducing therapeutic development timelines by 45%.
+- Supply Chain & Portfolio Optimization: Solving complex combinatorial optimization problems involving millions of constraint variables in real-time.
+- Materials Science: Designing room-temperature superconductors and high-density battery chemistries for renewable energy storage.
+
+3. POST-QUANTUM CRYPTOGRAPHY (PQC) TRANSITION
+Current public-key cryptography algorithms (such as RSA-2048 and ECC) will become vulnerable to Shor's Algorithm once quantum systems reach approximately 4,000 stable logical qubits.
+- The National Institute of Standards and Technology (NIST) has standardized primary lattice-based algorithms: ML-KEM (Kyber) for key encapsulation and ML-DSA (Dilithium) for digital signatures.
+- All enterprise infrastructure must complete inventory scanning of cryptographic assets by Q4 2026 and initiate hybrid classical-quantum key exchange protocols by Q1 2027.
+
+4. BUDGET ALLOCATION & STRATEGIC RECOMMENDATIONS
+Enterprises should allocate 8% to 12% of their annual cybersecurity and R&D budgets to quantum readiness initiatives. Failure to prepare for post-quantum migration creates catastrophic "harvest now, decrypt later" vulnerabilities against long-lived confidential intelligence.

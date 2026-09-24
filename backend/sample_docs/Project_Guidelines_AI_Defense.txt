@@ -1,0 +1,29 @@
+================================================================================
+PROJECT SPECIFICATION & EVALUATION GUIDELINES (ACADEMIC YEAR 2026)
+Document ID: DOC-SPEC-2026-XAI
+Department: Computer Science & Artificial Intelligence Engineering
+================================================================================
+
+1. EXECUTIVE SUMMARY & OBJECTIVES
+The primary objective of the proposed system is to develop an AI-based document analysis platform using Explainable AI (XAI). Traditional large language models operate as uninterpretable black boxes, often generating convincing hallucinations without verifiable evidence. The DocuExplain AI platform addresses this critical limitation by enforcing strict Retrieval-Augmented Generation (RAG) coupled with multi-dimensional explainability metrics: calibrated confidence scoring, verbatim source attribution, passage coverage ratio, and hallucination prevention safeguards.
+
+2. SUBMISSION DEADLINES & MILESTONES
+- Milestone 1 (System Architecture & UI Design Review): July 10, 2026.
+- Milestone 2 (RAG Pipeline & Vector Indexing Benchmarks): July 28, 2026.
+- Final Project Submission & Demonstration Deadline: August 15, 2026.
+- Viva Voce and Academic Defense: August 25, 2026.
+
+3. EVALUATION CRITERIA & WEIGHTAGE
+The final project assessment is structured across four primary dimensions:
+- Explainable AI (XAI) Depth & Transparency: 40% weightage. Evaluates confidence calibration, source page citation, and evidence extraction fidelity.
+- System Architecture & Retrieval Performance: 30% weightage. Evaluates vector search latency, semantic chunking strategy, and multi-format document parsing.
+- User Experience & Interface Quality: 20% weightage. Evaluates clarity of the 3-column chat, document evidence highlighting, and analytics visualization.
+- Code Engineering & Security: 10% weightage. Evaluates JWT authentication, role isolation, containerization, and modular API design.
+
+4. MANDATORY FUNCTIONAL REQUIREMENTS
+The system must support heterogeneous document ingestion including PDF, Microsoft Word (DOCX), PowerPoint (PPTX), and plain text files. All uploaded documents must undergo a strict 7-stage processing lifecycle: Uploading -> Text Extraction -> Cleaning -> Semantic Chunking -> Embedding Generation -> Vector Indexing -> Ready.
+
+When an answer cannot be grounded in the supplied context (similarity < 0.35), the system must explicitly declare: "I couldn't find sufficient evidence in the uploaded documents to answer this question."
+
+5. ETHICAL AI & PRIVACY COMPLIANCE
+User documents must be isolated using strict multi-tenant access controls. Unauthenticated users cannot view or query private collections. All vector embeddings must be stored in secure local indices without leaking confidential data to external telemetry.
